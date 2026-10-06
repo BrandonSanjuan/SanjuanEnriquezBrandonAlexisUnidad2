@@ -16,6 +16,7 @@ FinanTrack es una aplicación web desarrollada con Django que permite llevar un 
 * Git
 * GitHub
 * Visual Studio Code
+* Render
 
 ## Funcionalidades
 
@@ -28,6 +29,21 @@ FinanTrack es una aplicación web desarrollada con Django que permite llevar un 
 * Eliminación de movimientos.
 * Panel principal para consultar el resumen financiero.
 * Protección de las funciones principales mediante autenticación.
+
+## Acceso al sistema publicado
+
+El proyecto se encuentra disponible en la siguiente dirección:
+
+**https://finantrack-od4d.onrender.com/**
+
+### Cuenta de demostración
+
+Para revisar las funciones principales del sistema se puede utilizar la siguiente cuenta:
+
+* **Usuario:** `admin`
+* **Contraseña:** `FinanTrack2026`
+
+Estas credenciales corresponden a una cuenta creada exclusivamente para la demostración del proyecto académico.
 
 ## Estructura del proyecto
 
@@ -51,6 +67,8 @@ SanjuanEnriquezBrandonAlexisUnidad2/
 │
 ├── manage.py
 ├── .gitignore
+├── build.sh
+├── requirements.txt
 └── README.md
 ```
 
@@ -67,30 +85,55 @@ El flujo utilizado consiste en:
 5. Crear un commit descriptivo con `git commit`.
 6. Enviar los cambios al repositorio remoto mediante `git push`.
 
-## Instalación y ejecución
+Durante el desarrollo se realizaron diferentes commits para registrar el avance del proyecto y mantener un historial de cambios.
+
+## Despliegue en la nube
+
+Para publicar la aplicación se utilizó **Render**, conectado directamente con el repositorio de GitHub.
+
+El proceso de despliegue utiliza:
+
+* Python 3.
+* Archivo `requirements.txt` para instalar las dependencias.
+* Archivo `build.sh` para ejecutar la instalación, generación de archivos estáticos y migraciones.
+* Gunicorn como servidor para ejecutar la aplicación Django.
+* Variables de entorno para configurar la aplicación en producción.
+
+La aplicación publicada puede consultarse en:
+
+**https://finantrack-od4d.onrender.com/**
+
+## Instalación y ejecución local
 
 Para ejecutar el proyecto de manera local es necesario contar con Python instalado.
 
-Crear y activar el entorno virtual:
+### Crear el entorno virtual
 
 ```bash
 python -m venv .venv
+```
+
+### Activar el entorno virtual
+
+En Git Bash:
+
+```bash
 source .venv/Scripts/activate
 ```
 
-Instalar Django:
+### Instalar las dependencias
 
 ```bash
-python -m pip install django
+pip install -r requirements.txt
 ```
 
-Ejecutar las migraciones:
+### Ejecutar las migraciones
 
 ```bash
 python manage.py migrate
 ```
 
-Iniciar el servidor:
+### Iniciar el servidor
 
 ```bash
 python manage.py runserver
@@ -106,4 +149,10 @@ http://127.0.0.1:8000/
 
 Repositorio oficial del proyecto:
 
-https://github.com/BrandonSanjuan/SanjuanEnriquezBrandonAlexisUnidad2
+**https://github.com/BrandonSanjuan/SanjuanEnriquezBrandonAlexisUnidad2**
+
+## Autor
+
+**Brandon Alexis Sanjuan Enríquez**
+
+Proyecto académico — Desarrollo Web Integral, Unidad 2.
