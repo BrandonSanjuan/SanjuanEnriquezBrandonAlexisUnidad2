@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar movimiento | FinanTrack</title>
+</head>
+<body>
+
+    <h1>FinanTrack</h1>
+
+    <h2>Agregar movimiento</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">
+            Guardar movimiento
+        </button>
+    </form>
+
+    <br>
+
+    <a href="{% url 'inicio' %}">
+        Volver al inicio
+    </a>
+
+</body>
+</html>
