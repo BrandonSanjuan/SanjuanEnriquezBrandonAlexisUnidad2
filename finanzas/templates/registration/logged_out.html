@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sesión cerrada | FinanTrack</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #1f2937;
+        }
+
+        .contenedor {
+            width: 90%;
+            max-width: 450px;
+            background-color: white;
+            padding: 40px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+        }
+
+        h1 {
+            color: #172554;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #374151;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #6b7280;
+            margin-bottom: 25px;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 12px 22px;
+            background-color: #1d4ed8;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .boton:hover {
+            background-color: #1e40af;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>FinanTrack</h1>
+
+        <h2>Sesión cerrada</h2>
+
+        <p>
+            Has cerrado sesión correctamente.
+        </p>
+
+        <a href="{% url 'login' %}" class="boton">
+            Iniciar sesión nuevamente
+        </a>
+
+    </div>
+
+</body>
+</html>
